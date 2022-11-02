@@ -538,6 +538,10 @@ body {
   margin-bottom: 9px;
 }
 
+.logo-half {
+  color: var(--aсcent-color);
+}
+
 .subscription-footer {
   margin: 0px 0px 0px auto;
 }
