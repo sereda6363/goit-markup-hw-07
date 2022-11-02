@@ -48,12 +48,16 @@
   background: var(--aсcent-color);
 }
 
-.hero-clients,
-.excellence {
-  padding: 94px 0px 94px 0px;
+.excellence__list {
+  display: flex;
+  align-items: flex-start;
 }
 
-.hero-icon-link {
+.excellence__list .excellence__item + .excellence__item {
+  margin-left: 30px;
+}
+
+.excellence__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,39 +70,30 @@
   border-radius: 4px;
 }
 
-.hero-team-icon {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+.excellence__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 
-.hero-team-icon-link {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  background: var(--white-text-color);
-  color: var(--icon-logo);
-  &:hover,
-  &:focus {
-    background-color: var(--aсcent-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--white-text-color);
-  }
+.excellence__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--grey-text-color);
+  width: 270px;
 }
 
-.team-icon,
-.clients-icon {
-  fill: currentColor;
+.clients,
+.excellence {
+  padding: 94px 0px 94px 0px;
 }
 
-.hero-clients-title {
+.clients__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -108,15 +103,15 @@
   color: var(--title-text-color);
 }
 
-.hero-clients-list {
+.clients__list {
   display: flex;
 }
 
-.hero-clients-list .hero-clients-icon-list + .hero-clients-icon-list {
+.clients__list .clients__item + .clients__item {
   margin-left: 30px;
 }
 
-.hero-clients-icon-link {
+.clients__link {
   align-items: center;
   justify-content: center;
   width: 170px;
@@ -128,6 +123,7 @@
   border-radius: 4px;
 
   color: var(--icon-logo);
+
   &:hover,
   &:focus {
     color: var(--aсcent-color);
@@ -136,31 +132,9 @@
   }
 }
 
-.hero-item {
-  display: flex;
-  align-items: flex-start;
-}
-
-.hero-item .hero-item-list + .hero-item-list {
-  margin-left: 30px;
-}
-
-.hero-text-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--title-text-color);
-  margin-bottom: 10px;
-}
-
-.hero-text-item {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--grey-text-color);
-  width: 270px;
+.team-icon,
+.clients__logo {
+  fill: currentColor;
 }
 
 .hero-example {
@@ -177,7 +151,7 @@
   margin-bottom: 50px;
 }
 
-.hero-example-list .hero-example-item + .hero-example-item {
+.hero-example-list .hero-example-item+.hero-example-item {
   margin-left: 30px;
 }
 
@@ -185,10 +159,8 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  );
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4));
 }
 
 .hero-text {
@@ -226,7 +198,7 @@
   margin-bottom: 50px;
 }
 
-.hero-team-list .hero-team-item + .hero-team-item {
+.hero-team-list .hero-team-item+.hero-team-item {
   margin-left: 30px;
 }
 
@@ -234,6 +206,27 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+.hero-team-icon-link {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background: var(--white-text-color);
+  color: var(--icon-logo);
+  &:hover,
+  &:focus {
+    background-color: var(--aсcent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--white-text-color);
+  }
 }
 
 .hero-team-div {
@@ -259,4 +252,10 @@
   letter-spacing: 0.03em;
   color: var(--grey-text-color);
   margin-bottom: 16px;
+}
+
+.hero-team-icon {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
